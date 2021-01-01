@@ -21,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
     public void onClickFlash(View view){
         if(mFlashClass.isFlash_status()){
             mFlashClass.flashOff();
+            bFlash.setText("On");
         }else{
             mFlashClass.flashOn();
+            bFlash.setText("Off");
         }
     }
 }
