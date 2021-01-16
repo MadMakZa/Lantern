@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     //вспышка
-    public void onClickBlink(View view){
-            mFlashClass.blink();
+    public void onClickBlink(View view) throws InterruptedException {
+        for (int i = 0; i < 10; i++, Thread.sleep(50)){
+        mFlashClass.blink();
+        }
 
     }
 }
