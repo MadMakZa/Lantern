@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //вспышка
     public void onClickBlink(View view){
-        mFlashClass.blink();
+            mFlashClass.blink();
+
     }
 }
