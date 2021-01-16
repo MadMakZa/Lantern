@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lantern</string>
+    <string name="btnOnOff">ON</string>
+    <string name="btnBlink">Blink</string>
 </resources>

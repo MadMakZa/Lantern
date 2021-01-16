@@ -8,7 +8,9 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button bFlash;
+    private Button bBlink;
     private FlashClass mFlashClass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,9 +18,11 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
     private void init(){
-        bFlash = findViewById(R.id.b1);
+        bFlash = findViewById(R.id.btnOnOff);
+        bBlink = findViewById(R.id.btnFlash);
         mFlashClass = new FlashClass(this);
     }
+    //включить выключить фонарик
     public void onClickFlash(View view){
         if(mFlashClass.isFlash_status()){
             mFlashClass.flashOff();
@@ -27,5 +31,9 @@ public class MainActivity extends AppCompatActivity {
             mFlashClass.flashOn();
             bFlash.setText("Off");
         }
+    }
+    //вспышка
+    public void onClickBlink(View view){
+        mFlashClass.blink();
     }
 }
