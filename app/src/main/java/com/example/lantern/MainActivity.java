@@ -10,6 +10,10 @@ public class MainActivity extends AppCompatActivity {
     private Button bFlash;
     private Button bBlink;
     private FlashClass mFlashClass;
+    //точка, тире, пробел
+    private static int flashDot = 200;
+    private static int flashDash = 600;
+    private static int space = 400;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
     }
     //вспышка
     public void onClickBlink(View view) throws InterruptedException {
-        for (int i = 0; i < 10; i++, Thread.sleep(500)){
+        for (int i = 0; i < 10; i++, Thread.sleep(space)){
         mFlashClass.flashOn();
-        Thread.sleep(100);
+        Thread.sleep(flashDot);
         mFlashClass.flashOff();
         }
 
