@@ -38,16 +38,6 @@ public class FlashClass {
             e.printStackTrace();
         }
     }
-    //моргнуть
-    public void blink() {
-        flashOn();
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        flashOff();
-    }
     //getter
     public boolean isFlash_status() {
         return flash_status;
