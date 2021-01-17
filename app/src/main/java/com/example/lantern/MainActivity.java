@@ -38,10 +38,40 @@ public class MainActivity extends AppCompatActivity {
     }
     //вспышка
     public void onClickBlink(View view) throws InterruptedException {
-        for (int i = 0; i < 10; i++, Thread.sleep(space)){
-        mFlashClass.flashOn();
-        Thread.sleep(flashDot);
-        mFlashClass.flashOff();
+        for (int i = 0; i < 7; i++, Thread.sleep(space)){
+            //точка
+            mFlashClass.flashOn();
+            Thread.sleep(flashDot);
+            mFlashClass.flashOff();
+            Thread.sleep(space);
+            //точка
+            mFlashClass.flashOn();
+            Thread.sleep(flashDot);
+            mFlashClass.flashOff();
+            Thread.sleep(space);
+            //точка
+            mFlashClass.flashOn();
+            Thread.sleep(flashDot);
+            mFlashClass.flashOff();
+            Thread.sleep(space);
+            //тире
+            mFlashClass.flashOn();
+            Thread.sleep(flashDash);
+            mFlashClass.flashOff();
+            Thread.sleep(space);
+            //тире
+            mFlashClass.flashOn();
+            Thread.sleep(flashDash);
+            mFlashClass.flashOff();
+            Thread.sleep(space);
+            //тире
+            mFlashClass.flashOn();
+            Thread.sleep(flashDash);
+            mFlashClass.flashOff();
+
+
+
+
         }
 
     }
